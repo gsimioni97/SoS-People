@@ -1,0 +1,56 @@
+{% extends "template.html" %}
+{% block conteudo %}
+    <table class="container">
+
+        {% for conteudo in conteudos %}
+            {% if conteudo.id  == None %}
+                {{ pass }}
+            {% else %}
+                {% if conteudo.id % 3 == 0 %}
+                        <tr class="row">
+                            <td class="col-sm-4">
+                                <div class="panel panel-primary">
+                                    <div class="panel-heading"><a href="#" style="text-decoration:none; color:white">{{ conteudo.nome}}</a></div>
+                                    <div class="panel-body"><span class="glyphicon {{conteudo.icon}}"> {{conteudo.tipo}}</span></div>
+                                    <div class="panel-footer">{{conteudo.descricao}}</div>
+                                </div>
+                            </td>
+                        {{ continue }}
+                {% elif conteudo.id % 2 != 0 and conteudo.id + 3 % 2 == 2 %}
+                            <td class="col-sm-4">
+                                <div class="panel panel-primary">
+                                    <div class="panel-heading"><a href="#" style="text-decoration:none; color:white">{{conteudo.nome}}</a></div>
+                                    <div class="panel-body"><span class="glyphicon {{conteudo.icon}}"> {{conteudo.tipo}}</span></div>
+                                    <div class="panel-footer">{{conteudo.descricao}}</div>
+                                </div>
+                            </td>
+                            {{ continue }}
+                {% elif  conteudo.id % 2 == 0 and conteudo.id + 3 % 2 != 2 %}
+                            <td class="col-sm-4">
+                                <div class="panel panel-primary">
+                                    <div class="panel-heading"><a href="#" style="text-decoration:none; color:white">{{conteudo.nome}}</a></div>
+                                    <div class="panel-body"><span class="glyphicon {{conteudo.icon}}"> {{conteudo.tipo}}</span></div>
+                                    <div class="panel-footer">{{conteudo.descricao}}</div>
+                                </div>
+                            </td>
+                        </tr>
+                        {{ continue }}
+                {% else %}
+                   {{ pass }}
+                {% endif %}
+            {% endif %}
+
+
+        {% endfor %}
+
+
+    </table><br><br>
+
+    <a href="form" style="position:fixed;width:60px;height:60px;bottom:40px;right:40px;background-color:#337ab7;color:#FFF;border-radius:50px;text-align:center;font-size:30px;box-shadow: 1px 1px 2px #888;
+      z-index:1000;" target="_blank">
+    <i style="margin-top:16px" ><span class="glyphicon glyphicon-plus"></span></i>
+    </a>
+{% endblock %}
+
+
+

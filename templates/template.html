@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <title>SoS People</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../static/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+</head>
+<body>
+
+
+    <div class="jumbotron">
+      <div class="container text-center">
+        <h1>SoS People</h1>
+        <p>Estenda a mão à quem precisa</p>
+      </div>
+    </div>
+
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Logo</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="/">SoS</a></li>
+            <li><a href="#">Serviços (EM BREVE)</a></li>
+            <li><a href="#">Profissionais(EM BREVE)</a></li>
+            <li><a href="#">Meus cadastros(EM BREVE)</a></li>
+            <li><a href="#">Contato(EM BREVE)</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-user"></span></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    {% block conteudo %}{% endblock %}
+
+
+
+
+    <footer class="container-fluid text-center">
+      <p>Bootstrap Theme Made By <a href="https://www.w3schools.com">www.w3schools.com</a></p>
+      <p>&</p>
+      <p>Reeditado por Guilherme Rey Simioni</p>
+    </footer>
+
+
+</body>
+</html>

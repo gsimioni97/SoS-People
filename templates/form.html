@@ -1,0 +1,30 @@
+{% extends "template.html" %}
+{% block conteudo %}
+  <div class="container">
+    <form action="/criar" method="post">
+      <fieldset>
+        <div class="form-group">
+          <label for="InputNome">Nome</label>
+          <input type="text" class="form-control" id="InputNome" name="InputNome" placeholder="Digite seu nome ou da Instituição">
+        </div>
+        <div class="form-group">
+          <label for="inputAjuda">Tipo de ajuda</label>
+          <select id="inputAjuda" name="inputAjuda" class="form-control">
+            <option selected>Ajuda com alimentação</option>
+            <option>Ajuda com dinheiro</option>
+            <option>Ajuda com moradia</option>
+            <option>Ajuda com transporte</option>
+            <option>Ajuda com água</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="InputDescricao">Descrição</label>
+          <input type="text" class="form-control" id="InputDescricao" name="InputDescricao" placeholder="Digite aqui uma breve descrição de sua necessidade">
+        </div>
+        <button type="submit" class="btn btn-primary">Salvar</button>
+      </fieldset>
+    </form>
+  </div><br><br>
+{% endblock %}
+
+
